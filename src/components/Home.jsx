@@ -11,6 +11,7 @@ const Home = () => {
             <Banner/>
             <JobList/>
             <FeaturesJob jobData={jobData}/>
+            
         </div>
     );
 };
