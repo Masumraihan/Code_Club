@@ -16,7 +16,7 @@ const Navbar = () => {
               <AppLink to='/marks'>Statistics</AppLink>
             </li>
             <li>
-              <AppLink to=".jobs">Applied Jobs</AppLink>
+              <AppLink to="/applied">Applied Jobs</AppLink>
             </li>
             <li>
               <AppLink to="/blogs">Blog</AppLink>
@@ -65,10 +65,13 @@ const Navbar = () => {
             <h2 className="text-3xl font-bold">CodeClub</h2>
             <ul className='flex space-x-6'>
               <li>
+                <AppLink to='/'>Home</AppLink>
+              </li>
+              <li>
                 <AppLink to='/marks'>Statistics</AppLink>
               </li>
               <li>
-                <AppLink>Applied Jobs</AppLink>
+                <AppLink to="/applied">Applied Jobs</AppLink>
               </li>
               <li>
                 <AppLink>Blog</AppLink>

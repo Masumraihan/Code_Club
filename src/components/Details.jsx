@@ -38,7 +38,6 @@ const Details = () => {
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2 flex flex-col space-y-6'>
           <p>
-            {" "}
             <strong>Job description: </strong>
             {job_description}
           </p>

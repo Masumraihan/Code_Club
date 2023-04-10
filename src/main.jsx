@@ -8,6 +8,7 @@ import Home from './components/Home'
 import { loadFeaturesJobData } from './components/Loaders/loadFeaturesData'
 import Details from './components/Details'
 import Marks from './components/Marks'
+import AppliedJob from './components/AppliedJob'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path:"/marks",
         element:<Marks/>
+      },
+      {
+        path:"/applied",
+        element:<AppliedJob/>,
+        loader:loadFeaturesJobData
       }
     ]
   }
