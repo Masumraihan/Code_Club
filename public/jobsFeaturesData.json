@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "company_logo": "https://ibb.co/DkVr6f8",
+        "company_logo": "../src/assets/Logo/google-1-1 1-1.png",
         "job_title": "Frontend Developer",
         "company_name": "Google",
         "remote_or_onsite": "Remote",
@@ -19,9 +19,9 @@
     },
     {
         "id": 2,
-        "company_logo": "https://ibb.co/cXVnhZN",
+        "company_logo": "../src/assets/Logo/figma.png",
         "job_title": "Backend Developer",
-        "company_name": "Airbnb",
+        "company_name": "Figma",
         "remote_or_onsite": "Onsite",
         "location": "New York City",
         "fulltime_or_parttime": "Fulltime",
@@ -37,7 +37,7 @@
     },
     {
         "id": 3,
-        "company_logo": "https://ibb.co/zb6GhfL",
+        "company_logo": "../src/assets/Logo/netflix-4 1.png",
         "job_title": "Product Manager",
         "company_name": "Netflix",
         "remote_or_onsite": "Remote",
@@ -55,7 +55,7 @@
     },
     {
         "id": 4,
-        "company_logo": "https://ibb.co/VCbJ9Jz",
+        "company_logo": "../src/assets/Logo/tesla-9 1.png",
         "job_title": "Data Analyst",
         "company_name": "Tesla",
         "remote_or_onsite": "Onsite",
@@ -73,7 +73,7 @@
     },
     {
         "id": 5,
-        "company_logo": "https://ibb.co/71Sw9Zf",
+        "company_logo": "/src/assets/Logo/spotify.png",
         "job_title": "Marketing Manager",
         "company_name": "Spotify",
         "remote_or_onsite": "Onsite",
@@ -91,7 +91,7 @@
     },
     {
         "id": 6,
-        "company_logo": "https://ibb.co/44JxkfS",
+        "company_logo": "../src/assets/Logo/amazon.png",
         "job_title": "DevOps Engineer",
         "company_name": "Amazon",
         "remote_or_onsite": "Remote",
