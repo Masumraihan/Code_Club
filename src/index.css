@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply btn bg-gradient-to-r to-[#7E90FE] border-none from-[#9873FF] hover:bg-gradient-to-r hover:to-[#9873FF] hover:from-[#7E90FE];
+}
+.text-brand {
+  @apply text-[#7E90FE];
+}

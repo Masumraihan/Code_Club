@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "name": "Homework 1",
+      "marks": 85
+    },
+    {
+      "id": 2,
+      "name": "Homework 2",
+      "marks": 90
+    },
+    {
+      "id": 3,
+      "name": "Quiz 1",
+      "marks": 70
+    },
+    {
+      "id": 4,
+      "name": "Essay",
+      "marks": 95
+    },
+    {
+      "id": 5,
+      "name": "Midterm Exam",
+      "marks": 80
+    },
+    {
+      "id": 6,
+      "name": "Group Presentation",
+      "marks": 88
+    },
+    {
+      "id": 7,
+      "name": "Final Project",
+      "marks": 92
+    },
+    {
+      "id": 8,
+      "name": "Final Exam",
+      "marks": 83
+    }
+  ]
