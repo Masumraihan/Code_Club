@@ -2,17 +2,18 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import FeatureJob from "./FeatureJob";
 
-const FeaturesJob = () => {
+const FeaturesJob = ({data}) => {
+    const [allJobs,setAllJobs] = useState([])
   const [loadedData, setLoadedData] = useState([]);
+  const setAllData = () => {
+    setLoadedData(allJobs)
+  }
   useEffect(() => {
-    const loadFeaturesJobData = async () => {
-      const res = await axios.get("jobsFeaturesData.json");
-      setLoadedData(res.data);
-    };
-    loadFeaturesJobData();
+    setLoadedData(data.slice(0,4));
+    setAllJobs(data)
   }, []);
   return (
-    <div className="container mx-auto">
+    <div className='container mx-auto'>
       <div className='text-center'>
         <h1 className='text-5xl font-semibold mb-4'>Featured Jobs</h1>
         <p>
@@ -24,6 +25,9 @@ const FeaturesJob = () => {
         {loadedData.map((job) => (
           <FeatureJob key={job.id} job={job} />
         ))}
+      </div>
+      <div className="text-center pt-10 mb-32">
+        <button onClick={setAllData} className='btn-primary'>see all jobs</button>
       </div>
     </div>
   );

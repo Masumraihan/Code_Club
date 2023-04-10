@@ -5,13 +5,12 @@ import FeaturesJob from './FeaturesJob';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const jobData = useLoaderData();
+    const data = useLoaderData()
     return (
         <div>
             <Banner/>
             <JobList/>
-            <FeaturesJob jobData={jobData}/>
-            
+            <FeaturesJob data={data}/>
         </div>
     );
 };

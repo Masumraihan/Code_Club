@@ -1,17 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const AppLink = ({children}) => {
+const AppLink = ({to,children}) => {
   return (
-    <div>
+    <>
       <NavLink
+      to={to}
         className={({ isActive }) =>
-          isActive ? "text-brand" : ""
+          isActive ? "text-brand border-b-2 border-[#7E90FE] tracking-wide" : ""
         }
       >
         {children}
       </NavLink>
-    </div>
+    </>
   );
 };
 
