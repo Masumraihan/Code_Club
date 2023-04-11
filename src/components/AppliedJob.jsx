@@ -29,7 +29,7 @@ const AppliedJob = () => {
         }
       }
       setJobs(newJobs);
-      setAllJobs(newJobs)
+      setAllJobs(newJobs);
     }
   }, []);
 
@@ -46,11 +46,10 @@ const AppliedJob = () => {
           </div>
         </div>
       </Banner2>
-      <div className=' w-full top-0 hidden md:absolute md:block'></div>
       <div className='container mx-auto py-32'>
-        {/*<h1 className='text-center text-2xl font-extrabold pb-12'>
+        <h1 className='md:hidden text-center text-2xl font-extrabold py-12'>
           Applied Jobs
-        </h1>*/}
+        </h1>
         <div className='flex justify-end'>
           <div className='dropdown dropdown-left'>
             <label tabIndex={0} className='btn btn-ghost bg-[#F4F4F4] mb-8'>

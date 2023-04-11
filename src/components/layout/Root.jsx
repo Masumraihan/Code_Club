@@ -3,7 +3,6 @@ import Navbar from "../Header/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import { Toaster } from "react-hot-toast";
-import Banner from "../Header/Banner";
 
 const Root = () => {
   return (

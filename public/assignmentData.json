@@ -2,41 +2,41 @@
     {
       "id": 1,
       "name": "Homework 1",
-      "marks": 85
+      "marks": 60
     },
     {
       "id": 2,
       "name": "Homework 2",
-      "marks": 90
+      "marks": 60
     },
     {
       "id": 3,
       "name": "Quiz 1",
-      "marks": 70
+      "marks": 60
     },
     {
       "id": 4,
       "name": "Essay",
-      "marks": 95
+      "marks": 59
     },
     {
       "id": 5,
       "name": "Midterm Exam",
-      "marks": 80
+      "marks": 58
     },
     {
       "id": 6,
       "name": "Group Presentation",
-      "marks": 88
+      "marks": 60
     },
     {
       "id": 7,
       "name": "Final Project",
-      "marks": 92
+      "marks": 60
     },
     {
       "id": 8,
       "name": "Final Exam",
-      "marks": 83
+      "marks": 60
     }
   ]

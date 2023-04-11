@@ -7,8 +7,9 @@ import ErrorPage from './components/ErrorPage'
 import Home from './components/Home'
 import { loadFeaturesJobData } from './components/Loaders/loadFeaturesData'
 import Details from './components/Details'
-import Marks from './components/Marks'
 import AppliedJob from './components/AppliedJob'
+import Blogs from './components/Blogs'
+import Statistics from './components/Statistics'
 
 const router = createBrowserRouter([
   {
@@ -26,14 +27,19 @@ const router = createBrowserRouter([
         element:<Details/>,
       },
       {
-        path:"/marks",
-        element:<Marks/>
+        path:"/statistics",
+        element:<Statistics/>,
+        loader:() => fetch("/assignmentData.json")
       },
       {
         path:"/applied",
         element:<AppliedJob/>,
         loader:loadFeaturesJobData
-      }
+      },
+      {
+        path:"/blogs",
+        element:<Blogs/>
+      },
     ]
   }
 ])
