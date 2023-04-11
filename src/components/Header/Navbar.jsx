@@ -68,13 +68,13 @@ const Navbar = () => {
                 <AppLink to='/'>Home</AppLink>
               </li>
               <li>
-                <AppLink to='/marks'>Statistics</AppLink>
+                <AppLink to='/statistics'>Statistics</AppLink>
               </li>
               <li>
                 <AppLink to="/applied">Applied Jobs</AppLink>
               </li>
               <li>
-                <AppLink>Blog</AppLink>
+                <AppLink to="/blogs">Blog</AppLink>
               </li>
             </ul>
             <button className='btn-primary'>Star Applying</button>

@@ -35,7 +35,7 @@ const Details = () => {
   return (
     <div className='container mx-auto'>
       <h1 className='text-center text-2xl font-extrabold py-12'>Job Details</h1>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 md:px-0'>
         <div className='lg:col-span-2 flex flex-col space-y-6'>
           <p>
             <strong>Job description: </strong>
