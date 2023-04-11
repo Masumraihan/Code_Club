@@ -3,13 +3,12 @@ import Banner from "./Header/Banner";
 import JobList from "./JobList";
 import FeaturesJob from "./FeaturesJob";
 import { useLoaderData } from "react-router-dom";
-import bannerImg from "../assets/All Images/BannerImg.png";
 
 const Home = () => {
   const data = useLoaderData();
   return (
     <div>
-        <Banner/>
+      <Banner />
       <JobList />
       <FeaturesJob data={data} />
     </div>

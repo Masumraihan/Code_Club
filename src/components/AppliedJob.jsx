@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import SingleJob from "./SingleJob";
-import Banner from "./Header/Banner";
 import img1 from "../assets/All Images/Vector.png";
 import img2 from "../assets/All Images/Vector-1.png";
 import { filterByJobsType } from "./DbFunctions/filterByJobType";
+import Banner2 from "./Header/Banner2";
 
 const AppliedJob = () => {
   const [jobs, setJobs] = useState([]);
-  const [filterJobs,setFilterJobs] = useState([])
+  const [allJobs, setAllJobs] = useState([]);
   const loadedData = useLoaderData();
   const handleFilterJobs = () => {
-    const filteredJobs = filterByJobsType(jobs,"Remote");
+    const filteredJobs = filterByJobsType(allJobs, "Remote");
     setJobs(filteredJobs);
-  }
+  };
   const handleFilterJobs2 = () => {
-    const filteredJobs = filterByJobsType(jobs,"Onsite");
+    const filteredJobs = filterByJobsType(allJobs, "Onsite");
     setJobs(filteredJobs);
-  }
+  };
   useEffect(() => {
     let newJobs = [];
     const storedJobId = JSON.parse(localStorage.getItem("job-id"));
@@ -29,18 +29,28 @@ const AppliedJob = () => {
         }
       }
       setJobs(newJobs);
-      setFilterJobs(newJobs)
+      setAllJobs(newJobs)
     }
   }, []);
-  
+
   return (
     <>
-      <div className=' w-full top-0 hidden md:absolute md:block'>
-      </div>
+      <Banner2>
+        <div className='bg-[rgba(126,144,254,0.05)] absolute top-0 w-full hidden md:block'>
+          <div className='flex justify-between'>
+            <img src={img1} alt='banner_img1' />
+            <h1 className='text-center flex items-end text-2xl font-extrabold py-12'>
+              Applied Jobs
+            </h1>
+            <img src={img2} alt='banner_img2' />
+          </div>
+        </div>
+      </Banner2>
+      <div className=' w-full top-0 hidden md:absolute md:block'></div>
       <div className='container mx-auto py-32'>
-        <h1 className='text-center text-2xl font-extrabold pb-12'>
+        {/*<h1 className='text-center text-2xl font-extrabold pb-12'>
           Applied Jobs
-        </h1>
+        </h1>*/}
         <div className='flex justify-end'>
           <div className='dropdown dropdown-left'>
             <label tabIndex={0} className='btn btn-ghost bg-[#F4F4F4] mb-8'>
