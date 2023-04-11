@@ -4,10 +4,20 @@ import SingleJob from "./SingleJob";
 import Banner from "./Header/Banner";
 import img1 from "../assets/All Images/Vector.png";
 import img2 from "../assets/All Images/Vector-1.png";
+import { filterByJobsType } from "./DbFunctions/filterByJobType";
 
 const AppliedJob = () => {
   const [jobs, setJobs] = useState([]);
+  const [filterJobs,setFilterJobs] = useState([])
   const loadedData = useLoaderData();
+  const handleFilterJobs = () => {
+    const filteredJobs = filterByJobsType(jobs,"Remote");
+    setJobs(filteredJobs);
+  }
+  const handleFilterJobs2 = () => {
+    const filteredJobs = filterByJobsType(jobs,"Onsite");
+    setJobs(filteredJobs);
+  }
   useEffect(() => {
     let newJobs = [];
     const storedJobId = JSON.parse(localStorage.getItem("job-id"));
@@ -19,27 +29,18 @@ const AppliedJob = () => {
         }
       }
       setJobs(newJobs);
+      setFilterJobs(newJobs)
     }
   }, []);
+  
   return (
     <>
       <div className=' w-full top-0 hidden md:absolute md:block'>
-        <Banner>
-          <div className='bg-[rgba(126,144,254,0.05)]'>
-            <div className='flex justify-between'>
-              <img src={img1} alt='banner_img1' />
-              <img src={img2} alt='banner_img2' />
-            </div>
-            <h1 className='text-center text-2xl font-extrabold pb-12'>
-              Applied Jobs
-            </h1>
-          </div>
-        </Banner>
       </div>
       <div className='container mx-auto py-32'>
-        {/*<h1 className='text-center text-2xl font-extrabold pb-12'>
+        <h1 className='text-center text-2xl font-extrabold pb-12'>
           Applied Jobs
-        </h1>*/}
+        </h1>
         <div className='flex justify-end'>
           <div className='dropdown dropdown-left'>
             <label tabIndex={0} className='btn btn-ghost bg-[#F4F4F4] mb-8'>
@@ -63,11 +64,11 @@ const AppliedJob = () => {
               tabIndex={0}
               className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
             >
-              <li>
-                <a>Item 1</a>
+              <li onClick={handleFilterJobs}>
+                <a>Remote</a>
               </li>
-              <li>
-                <a>Item 2</a>
+              <li onClick={handleFilterJobs2}>
+                <a>Onsite</a>
               </li>
             </ul>
           </div>
