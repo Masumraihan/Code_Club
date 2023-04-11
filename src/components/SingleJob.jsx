@@ -13,7 +13,7 @@ const SingleJob = ({ job }) => {
     location,
   } = job;
   return (
-    <div className='border border-[#7E90FE] rounded flex items-center p-8 gap-8'>
+    <div className='border border-gray-200 rounded flex items-center p-8 gap-8 flex-wrap'>
       <img className="w-36" src={company_logo} alt={company_name} />
       <div>
         <h3 className='text-2xl font-bold'>{job_title}</h3>
@@ -49,7 +49,7 @@ const SingleJob = ({ job }) => {
             </svg>
             <p className='text-xl'>{location}</p>
           </div>
-          <div className='flex items-center'>
+          <div className='flex items-center justify-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -68,7 +68,7 @@ const SingleJob = ({ job }) => {
           </div>
         </div>
       </div>
-      <div className="ml-auto">
+      <div className="md:ml-auto">
         <Link to={`/details/${id}`}>
           <button className='btn-primary'>View Details</button>
         </Link>

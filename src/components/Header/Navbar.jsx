@@ -4,7 +4,7 @@ import AppLink from "./AppLink";
 const Navbar = () => {
   const [isFold, setIsFold] = useState(false);
   return (
-    <div className='bg-[rgba(126,144,254,0.05)]'>
+    <div className='relative z-50'>
       <div className='hidden md:block container mx-auto py-12'>
         <nav className='flex justify-between items-center'>
           <h2 className="text-3xl font-bold">CodeClub</h2>
