@@ -18,6 +18,9 @@ const AppliedJob = () => {
     const filteredJobs = filterByJobsType(allJobs, "Onsite");
     setJobs(filteredJobs);
   };
+  const handleAllJobs = () => {
+    setJobs(allJobs);
+  };
   useEffect(() => {
     let newJobs = [];
     const storedJobId = JSON.parse(localStorage.getItem("job-id"));
@@ -74,6 +77,9 @@ const AppliedJob = () => {
                 tabIndex={0}
                 className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
               >
+                <li onClick={handleAllJobs}>
+                  <a>All</a>
+                </li>
                 <li onClick={handleFilterJobs}>
                   <a>Remote</a>
                 </li>
