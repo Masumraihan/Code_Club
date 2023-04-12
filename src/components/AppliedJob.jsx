@@ -32,7 +32,6 @@ const AppliedJob = () => {
       setAllJobs(newJobs);
     }
   }, []);
-
   return (
     <>
       <Banner2>
@@ -46,47 +45,52 @@ const AppliedJob = () => {
           </div>
         </div>
       </Banner2>
+
       <div className='container mx-auto py-32'>
         <h1 className='md:hidden text-center text-2xl font-extrabold py-12'>
           Applied Jobs
         </h1>
-        <div className='flex justify-end'>
-          <div className='dropdown dropdown-left'>
-            <label tabIndex={0} className='btn btn-ghost bg-[#F4F4F4] mb-8'>
-              Filter By
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={1.5}
-                stroke='currentColor'
-                className='w-6 h-6'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M19.5 8.25l-7.5 7.5-7.5-7.5'
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
-            >
-              <li onClick={handleFilterJobs}>
-                <a>Remote</a>
-              </li>
-              <li onClick={handleFilterJobs2}>
-                <a>Onsite</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className='flex flex-col gap-6'>
-          {jobs.map((job) => (
-            <SingleJob key={job.id} job={job} />
-          ))}
-        </div>
+        {
+         jobs.length ? <div>
+            <div className='flex justify-end'>
+              <div className='dropdown dropdown-left'>
+                <label tabIndex={0} className='btn btn-ghost bg-[#F4F4F4] mb-8'>
+                  Filter By
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={1.5}
+                    stroke='currentColor'
+                    className='w-6 h-6'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+                    />
+                  </svg>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
+                >
+                  <li onClick={handleFilterJobs}>
+                    <a>Remote</a>
+                  </li>
+                  <li onClick={handleFilterJobs2}>
+                    <a>Onsite</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='flex flex-col gap-6'>
+              {jobs.map((job) => (
+                <SingleJob key={job.id} job={job} />
+              ))}
+            </div>
+          </div> : <h1 className="text-3xl text-center font-extrabold text-brand">Please apply some job....</h1>
+        }
       </div>
     </>
   );
